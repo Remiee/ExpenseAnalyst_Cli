@@ -47,10 +47,8 @@
       <div class="form-group mx-auto">
         <label for="category">Category</label>
         <select class="form-control" [(ngModel)]="newExpense.category" name="category" id="category">
-          <option value="" disabled selected>Select your category</option>
-          <option aria-required="true" *ngFor="let category of categories">
-            <app-category [category]="category"></app-category>
-          </option>
+          <option value="">All</option>
+          <option [value]="category.name" *ngFor="let category of categories">{{category.name}}</option>
         </select>
       </div>
       <div class="form-group mx-auto">
