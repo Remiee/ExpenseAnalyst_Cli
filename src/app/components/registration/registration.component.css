@@ -1,0 +1,28 @@
+h3,
+p {
+  color: white;
+}
+
+.form-control {
+  border-radius: 1.5rem;
+}
+
+.btn {
+  border: none;
+  border-radius: 1.5rem;
+  background-color: rgb(84, 187, 201);
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(78, 174, 187);
+}
+
+.form-box {
+  max-width: 30vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  margin-top: 8%;
+  margin-right: 5%;
+  border-radius: 1.5rem;
+}

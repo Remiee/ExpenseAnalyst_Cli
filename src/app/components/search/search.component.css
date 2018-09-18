@@ -1,0 +1,39 @@
+.content {
+  width: 1269px;
+  top: 0;
+  position: absolute;
+  height: 200px;
+  margin-left: 250px;
+  background: rgb(84, 187, 201);
+}
+
+#categoryForm {
+  width: 80%;
+  margin: 2% 0%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+label {
+  color: white;
+}
+
+#searchBtn {
+  border: solid 1.5px white;
+  border-radius: 1.5rem;
+  background-color: rgb(84, 187, 201);
+  color: white;
+  width: 150px;
+}
+
+#searchBtn:hover {
+  border: solid 1.5px rgb(84, 187, 201);
+  border-radius: 1.5rem;
+  background-color: white;
+  color: rgb(84, 187, 201);
+}
+
+.form-group {
+  width: 300px;
+}

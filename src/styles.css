@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body .ui-inputtext {
+  width: 300px;
+  border: 1px solid #ced4da !important;
+}

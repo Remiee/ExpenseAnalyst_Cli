@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+a,
+a:hover,
+a:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: linear-gradient(#454b55, #30363f);
+
+  color: #fff;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+
+#sidebar ul.components {
+  padding: 10px 0;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  background: #2d3542;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #2d3542;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+}
+
+.bluebtn {
+  border: none;
+  width: 200px;
+  border-radius: 1.5rem;
+  background-color: rgb(84, 187, 201);
+  color: white;
+}
+
+.bluebtn:hover {
+  background-color: rgb(78, 174, 187);
+}
+
+#saveExp {
+  border: none;
+  width: 200px;
+  border-radius: 1.5rem;
+  background-color: rgb(84, 187, 201);
+  color: white;
+}
+
+.form-group {
+  width: 300px;
+}
+
+

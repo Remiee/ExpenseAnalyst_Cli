@@ -1,0 +1,6 @@
+<div class="elements">
+  <p class="list-group-item-heading">{{expense.category}}</p>
+  <p class="list-group-item-text">{{expense.amount | number:'1.0-0'}} Ft</p>
+  <p class="list-group-item-text">{{expense.comment}}</p>
+  <p class="list-group-item-text">{{expense.spentAt | date: 'd MMMM yyyy' }}</p>
+</div>

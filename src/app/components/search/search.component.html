@@ -1,0 +1,26 @@
+<div class="content">
+  <form id="categoryForm" class="mx-auto">
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select class="form-control form-control-sm" [(ngModel)]="searchParams.category" name="category" id="category">
+        <!-- <option [value]="undefined" disabled selected>Select your category</option> -->
+        <option value="">All</option>
+        <option [value]="category.name" *ngFor="let category of categories">{{category.name}}</option>
+        <!-- <option aria-required="true" *ngFor="let category of categories">
+          <app-category [category]="category"></app-category>
+        </option> -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fromDate">From</label>
+      <p-calendar [(ngModel)]="searchParams.fromDate" dateFormat="yy-mm-dd" id="fromDate" inputStyleClass="form-control form-control-sm"
+        name="fromDate" placeholder=" yyyy-mm-dd"></p-calendar>
+    </div>
+    <div class="form-group">
+      <label for="toDate">To</label>
+      <p-calendar [(ngModel)]="searchParams.toDate" dateFormat="yy-mm-dd" id="toDate" inputStyleClass="form-control form-control-sm"
+        name="toDate" placeholder=" yyyy-mm-dd"></p-calendar>
+    </div>
+  </form>
+  <button type="button" id="searchBtn" class="btn btn-block mx-auto" (click)="onSearch()">Search</button>
+</div>

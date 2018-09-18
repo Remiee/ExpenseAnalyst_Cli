@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<div class="stripe">
+  <div class="title">
+    <h3>Account information</h3>
+  </div>
+</div>
+<div class="information">
+  <form (ngSubmit)="updateUser()" role="form" method="PUT" #myForm="ngForm">
+    <div class="formfields shadow">
+    <div class="form-group">
+      <label for="firstName">First name</label>
+      <input type="text" id="firstName" class="form-control" name="name" [(ngModel)]="user.firstName" required />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input id="lastName" class="form-control" name="lastName" [(ngModel)]="user.lastName" required />
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail address</label>
+      <input id="email" class="form-control" name="email" type="email" [(ngModel)]="user.email" required />
+    </div>
+    <div class="form-group mt-4">
+        <label for="password">Password</label>
+      <button class="btn btn-primary ml-5 bluebtn" type="button" data-toggle="collapse" data-target="#passwordChange"
+        aria-expanded="false" aria-controls="passwordChange">Change password</button>
+    </div>
+    <div class="collapse" id="passwordChange">
+      <hr>
+      <div class="form-group">
+        <label for="password">New password</label>
+        <input id="password" class="form-control" type="password" name="password" [(ngModel)]="user.password" />
+      </div>
+      <div class="form-group">
+        <label for="passwordConf">Confirm new password</label>
+        <input id="passwordConf" class="form-control" type="password" name="passwordConf" />
+      </div>
+    </div>
+  </div>
+    <button class="btn btn-primary mr-2 bluebtn" type="submit">Submit</button>
+    <button class="btn" id="greybtn" (click)="onCancel()">Cancel</button>
+  </form>
+</div>

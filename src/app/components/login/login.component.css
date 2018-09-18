@@ -1,0 +1,19 @@
+.navbar {
+  background: transparent;
+}
+
+.form-control {
+  border-radius: 1.5rem;
+}
+
+.btn {
+  width: 100px;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: rgb(84, 187, 201);
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgb(78, 174, 187);
+}

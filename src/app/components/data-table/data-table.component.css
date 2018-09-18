@@ -1,0 +1,10 @@
+.data-table {
+  position: relative;
+  width: 550px;
+  margin-left: 300px;
+  margin-top: 250px;
+}
+
+ng-container, td {
+  width: 500px;
+}

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark mr-5 ml-5 pt-2">
+  <a class="navbar-brand"><img src="../../assets/img/logo2.png"></a>
+  <form method="POST" action="/" class="form-inline">
+    <label class="sr-only" for="form-email">Email</label>
+    <input [(ngModel)]="loginUserData.email" class="form-control mr-sm-2" name="form-email" type="text" placeholder="E-mail address" aria-label="Email">
+    <label class="sr-only" for="form-password">Password</label>
+    <input [(ngModel)]="loginUserData.password" class="form-control mr-sm-2" name="form-password" type="password" placeholder="Password" aria-label="Password">
+    <button (click)="loginUser()" class="btn my-2 my-sm-0" type="submit">Login</button>
+  </form>
+</nav>
