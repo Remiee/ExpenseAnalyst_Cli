@@ -5,13 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { MatTableModule, MatPaginatorModule, MatSortModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {CalendarModule} from 'primeng/calendar';
 import {AccordionModule} from 'primeng/accordion';
-import {MenuItem} from 'primeng/api';
 import {ChartModule} from 'primeng/chart';
 
 import { AppComponent } from './app.component';
@@ -68,7 +67,6 @@ const appRoutes: Routes = [
     NgbModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule,
     MatButtonModule,
     MatIconModule,
     MultiSelectModule,

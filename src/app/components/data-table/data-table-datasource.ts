@@ -17,29 +17,28 @@ export class DataTableDataSource extends DataSource<any> {
   }
 
   connect(): Observable<Expense[]> {
-    return this.expensesChanged;
-
-    /*
-    const dataMutations = [
-      observableOf(this.expensesChanged),
-      this.paginator.page,
-      this.sort.sortChange
-    ];
-
-    this.paginator.length = this.expenses.length;
-
-    return merge(...dataMutations).pipe(map(() => {
-      return this.getPagedData(this.getSortedData([...this.expenses]));
+    return this.expensesChanged.pipe(map((item) => {
+      this.paginator.length = item.length;
+      return this.getPagedData(this.getSortedData(item));
     }));
-    */
+
+    // const dataMutations = [
+    //   observableOf(this.expensesChanged),
+    //   this.paginator.page,
+    //   this.sort.sortChange
+    // ];
+
+    // return merge(...dataMutations).pipe(map(() => {
+    // }));
+
   }
 
   disconnect() { }
 
-  /**
-   * Paginate the data (client-side). If you're using server-side pagination,
-   * this would be replaced by requesting the appropriate data from the server.
-   */
+  private getSortedData(expenses: Expense[]): Expense[] {
+    return expenses;
+  }
+
   private getPagedData(expenses: Expense[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return expenses.splice(startIndex, this.paginator.pageSize);
