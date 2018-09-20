@@ -4,7 +4,7 @@
   position: fixed;
   height: 105px;
   margin-left: 250px;
-  background: rgb(84, 187, 201);
+  background: #54bbc9;
 }
 
 .title {
@@ -26,12 +26,12 @@ h3 {
   border: none;
   width: 150px;
   border-radius: 1.5rem;
-  background-color: rgb(84, 187, 201);
+  background-color: #54bbc9;
   color: white;
 }
 
 .bluebtn:hover {
-  background-color: rgb(78, 174, 187);
+  background-color: #4eaebb;
 }
 
 #greybtn {

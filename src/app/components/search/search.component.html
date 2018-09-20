@@ -10,12 +10,12 @@
     <div class="form-group">
       <label for="fromDate">From</label>
       <p-calendar [(ngModel)]="searchParams.fromDate" dateFormat="yy-mm-dd" id="fromDate" inputStyleClass="form-control form-control-sm"
-        name="fromDate" placeholder=" yyyy-mm-dd"></p-calendar>
+        name="fromDate" placeholder=" yyyy-mm-dd" showButtonBar="true"></p-calendar>
     </div>
     <div class="form-group">
       <label for="toDate">To</label>
       <p-calendar [(ngModel)]="searchParams.toDate" dateFormat="yy-mm-dd" id="toDate" inputStyleClass="form-control form-control-sm"
-        name="toDate" placeholder=" yyyy-mm-dd"></p-calendar>
+        name="toDate" placeholder=" yyyy-mm-dd" showButtonBar="true"></p-calendar>
     </div>
   </form>
   <button type="button" id="searchBtn" class="btn btn-block mx-auto" (click)="onSearch()">Search</button>

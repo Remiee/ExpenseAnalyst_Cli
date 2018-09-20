@@ -10,10 +10,10 @@
   width: 100px;
   border: none;
   border-radius: 1.5rem;
-  background-color: rgb(84, 187, 201);
+  background-color: #54bbc9;
   color: white;
 }
 
 .btn:hover {
-  background-color: rgb(78, 174, 187);
+  background-color: #4eaebb;
 }

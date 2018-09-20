@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 import { MatPaginator } from '@angular/material';
 import { DataTableDataSource } from './data-table-datasource';
 import { Expense } from '../../models/expense.model';
@@ -14,6 +14,7 @@ import { BehaviorSubject } from 'rxjs';
 export class DataTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() expenses: BehaviorSubject<Expense[]>;
+  @Output() deleteExpense = new EventEmitter();
   dataSource: DataTableDataSource;
   constructor(private expenseService: ExpenseService) { }
 
@@ -25,6 +26,10 @@ export class DataTableComponent implements OnInit {
 
   delete(id) {
     this.expenseService.delete(id)
-    .subscribe(res => console.log(res), err => console.log(err));
+    .subscribe(res => this.updateResult(), err => console.log(err));
+  }
+
+  updateResult() {
+    this.deleteExpense.emit();
   }
 }

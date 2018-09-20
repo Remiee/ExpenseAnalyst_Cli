@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Expense } from '../../models/Expense.model';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
@@ -9,7 +8,6 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-
   expenseSums: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   expenses: Expense[];
 
@@ -31,8 +29,8 @@ export class ChartComponent implements OnInit {
       labels: ['Jan', 'Feb', 'March', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
       datasets: [{
         label: 'Total cost',
-        backgroundColor: '#969ba3',
-        borderColor: '#969ba3',
+        backgroundColor: '#347e91',
+        borderColor: '#347e91',
         data: this.expenseSums
       }],
     };

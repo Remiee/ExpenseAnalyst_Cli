@@ -46,7 +46,7 @@
       </div>
       <div class="form-group mx-auto">
         <label for="category">Category</label>
-        <select class="form-control" [(ngModel)]="newExpense.category" name="category" id="category">
+        <select class="form-control" [(ngModel)]="newExpense.category" name="category" id="category" required>
           <option value="">All</option>
           <option [value]="category.name" *ngFor="let category of categories">{{category.name}}</option>
         </select>
@@ -60,7 +60,7 @@
       <div class="form-group mx-auto">
         <label for="spentAt">Date</label><br>
         <p-calendar [(ngModel)]="newExpense.spentAt" dateFormat="yy-mm-dd" id="spentAt" inputStyleClass="form-control"
-          name="spentAt" placeholder=" yyyy-mm-dd"></p-calendar>
+          name="spentAt" placeholder=" yyyy-mm-dd" required></p-calendar>
       </div>
     </form>
   </div>

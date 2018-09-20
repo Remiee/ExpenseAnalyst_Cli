@@ -1,10 +1,10 @@
 .content {
-  width: 84%;
+  width: 85%;
   top: 0;
   position: absolute;
   height: 200px;
   margin-left: 250px;
-  background: rgb(84, 187, 201);
+  background: #54bbc9;
   z-index: 10;
 }
 
@@ -23,16 +23,16 @@ label {
 #searchBtn {
   border: solid 1.5px white;
   border-radius: 1.5rem;
-  background-color: rgb(84, 187, 201);
+  background-color: #54bbc9;
   color: white;
   width: 150px;
 }
 
 #searchBtn:hover {
-  border: solid 1.5px rgb(84, 187, 201);
+  border: solid 1.5px #4eaebb;
   border-radius: 1.5rem;
   background-color: white;
-  color: rgb(84, 187, 201);
+  color: #4eaebb;
 }
 
 .form-group {
