@@ -24,6 +24,10 @@ export class ProfileComponent implements OnInit {
       .subscribe(res => this.onUpdateSuccess(), err => console.log(err));
   }
 
+  switchPassword(e) {
+    return e.type = e.type === 'password' ? 'text' : 'password';
+  }
+
   onUpdateSuccess() {
     this.router.navigate(['profile']);
   }

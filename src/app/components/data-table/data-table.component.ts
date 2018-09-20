@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, Input, ViewEncapsulation } from '@angular
 import { MatPaginator } from '@angular/material';
 import { DataTableDataSource } from './data-table-datasource';
 import { Expense } from '../../models/expense.model';
+import { ExpenseService } from '../../services/expense.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -14,11 +15,16 @@ export class DataTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() expenses: BehaviorSubject<Expense[]>;
   dataSource: DataTableDataSource;
-  constructor() { }
+  constructor(private expenseService: ExpenseService) { }
 
-  displayedColumns = ['Category', 'Amount', 'Comment', 'Date'];
+  displayedColumns = ['Category', 'Amount', 'Comment', 'Date', 'Delete'];
 
   ngOnInit() {
     this.dataSource = new DataTableDataSource(this.paginator, this.expenses);
+  }
+
+  delete(id) {
+    this.expenseService.delete(id)
+    .subscribe(res => console.log(res), err => console.log(err));
   }
 }

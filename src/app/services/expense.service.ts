@@ -9,6 +9,8 @@ export class ExpenseService {
 
   private expenseListUrl = 'http://localhost:8080/users/expenses';
   private createExpenseUrl = 'http://localhost:8080/expenses';
+  private deleteExpenseUrl = 'http://localhost:8080/expenses';
+
   constructor(private http: HttpClient) { }
 
   getAll(category?: string, fromDate?: string, toDate?: string): Observable<Expense[]> {
@@ -29,6 +31,10 @@ export class ExpenseService {
 
   newExpense(expense) {
     return this.http.post<any>(this.createExpenseUrl, expense);
+  }
+
+  delete(id) {
+    return this.http.delete<any>(`${this.deleteExpenseUrl}/${id}`);
   }
 }
 

@@ -22,7 +22,32 @@ p {
   max-width: 30vw;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5%;
-  margin-top: 8%;
+  margin-top: 12%;
   margin-right: 5%;
   border-radius: 1.5rem;
+}
+
+.buttonInside {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#showPassword {
+  position: absolute;
+  right: 15px;
+  top: 4px;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  color: rgb(82, 84, 88);
+  font-size: 20px;
+}
+
+#showPassword:hover {
+  cursor: pointer;
 }

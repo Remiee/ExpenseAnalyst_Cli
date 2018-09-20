@@ -23,4 +23,8 @@ export class RegistrationComponent implements OnInit {
     localStorage.setItem('token', token);
     this.router.navigate(['profile']);
   }
+
+  switchPassword(e) {
+    return e.type = e.type === 'password' ? 'text' : 'password';
+  }
 }

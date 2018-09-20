@@ -6,10 +6,18 @@
   margin-bottom: 100px;
 }
 
-.data {
-  z-index: 10 !important;
+ng-container,
+td {
+  width: 500px;
 }
 
-ng-container, td {
-  width: 500px;
+.mat-column-Delete {
+  width: 8px;
+}
+
+.clear {
+  cursor: pointer;
+  opacity: 0.3;
+  font-size: 1.2em;
+  margin-top: 5px;
 }

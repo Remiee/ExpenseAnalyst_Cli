@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <app-search (searchParamsChanged)="filter($event)"></app-search>
 <div class="row">
-  <div class="col-md-6 data">
+  <div class="col-md-6">
     <app-data-table [expenses]="expensesChanged"></app-data-table>
   </div>
-  <div class="col-md-6 data">
+  <div class="col-md-6">
     <app-chart></app-chart>
   </div>
 </div>

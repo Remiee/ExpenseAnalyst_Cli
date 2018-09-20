@@ -26,13 +26,10 @@
     </div>
     <div class="collapse" id="passwordChange">
       <hr>
-      <div class="form-group">
+      <div class="form-group buttonInside">
         <label for="password">New password</label>
-        <input id="password" class="form-control" type="password" name="password" [(ngModel)]="user.password" />
-      </div>
-      <div class="form-group">
-        <label for="passwordConf">Confirm new password</label>
-        <input id="passwordConf" class="form-control" type="password" name="passwordConf" />
+        <input id="password" class="form-control" type="password" #e name="password" [(ngModel)]="user.password" minlength="6" maxlength="30"/>
+        <button id="showPassword" title="Show password" type="button" (click)="switchPassword(e)"><i class="fa fa-eye"></i></button>
       </div>
     </div>
   </div>

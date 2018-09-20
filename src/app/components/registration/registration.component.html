@@ -1,38 +1,34 @@
 <div class="form-box">
-    <div class="form-top">
-      <div class="form-top-left pb-2">
-        <h3>Create your account</h3>
-        <p>Fill in the form below to get instant access</p>
-      </div>
-    </div>
-    <div class="form-bottom">
-      <form role="form" action="" method="post" class="registration-form">
-        <div class="form-group">
-          <label class="sr-only" for="form-first-name">First name</label>
-          <input [(ngModel)]="registerUserData.firstName" type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control"
-            id="form-first-name" required>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="form-last-name">Last name</label>
-          <input [(ngModel)]="registerUserData.lastName" type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control"
-            id="form-last-name" required>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="form-email">Email</label>
-          <input [(ngModel)]="registerUserData.email" type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email"
-            required>
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="form-password">Password</label>
-          <input [(ngModel)]="registerUserData.password" type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password"
-            required minlength="6" maxlength="30">
-        </div>
-        <div class="form-group">
-          <label class="sr-only" for="form-passwordConf">Confirm password</label>
-          <input type="password" name="form-passwordConf" placeholder="Confirm password..." class="form-passwordConf form-control"
-            id="form-passwordConf" required>
-        </div>
-        <button (click)="registerUser()" type="submit" class="btn btn-block mt-5">Sign up</button>
-      </form>
+  <div class="form-top">
+    <div class="form-top-left pb-2">
+      <h3>Create your account</h3>
+      <p>Fill in the form below to get instant access</p>
     </div>
   </div>
+  <div class="form-bottom">
+    <form role="form" action="" method="post" class="registration-form">
+      <div class="form-group">
+        <label class="sr-only" for="form-first-name">First name</label>
+        <input [(ngModel)]="registerUserData.firstName" type="text" name="form-first-name" placeholder="First name..."
+          class="form-first-name form-control" id="form-first-name" required>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="form-last-name">Last name</label>
+        <input [(ngModel)]="registerUserData.lastName" type="text" name="form-last-name" placeholder="Last name..."
+          class="form-last-name form-control" id="form-last-name" required>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="form-email">Email</label>
+        <input [(ngModel)]="registerUserData.email" type="text" name="form-email" placeholder="Email..." class="form-email form-control"
+          id="form-email" required>
+      </div>
+      <div class="form-group buttonInside">
+        <label class="sr-only" for="form-password">Password</label>
+        <input [(ngModel)]="registerUserData.password" type="password" name="form-password" placeholder="Password..."
+          class="form-password form-control" id="form-password" #e required minlength="6" maxlength="30">
+        <button id="showPassword" title="Show password" (click)="switchPassword(e)"><i class="fa fa-eye"></i></button>
+      </div>
+      <button (click)="registerUser()" type="submit" class="btn btn-block mt-5">Sign up</button>
+    </form>
+  </div>
+</div>

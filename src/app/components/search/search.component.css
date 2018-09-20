@@ -5,6 +5,7 @@
   height: 200px;
   margin-left: 250px;
   background: rgb(84, 187, 201);
+  z-index: 10;
 }
 
 #categoryForm {

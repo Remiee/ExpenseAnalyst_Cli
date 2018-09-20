@@ -17,7 +17,7 @@ h3 {
 }
 
 .information {
-  margin-top: 170px;
+  margin-top: 160px;
   margin-left: 350px;
   width: 500px;
 }
@@ -47,7 +47,32 @@ h3 {
 }
 
 .formfields {
-  padding: 40px;
+  padding: 35px;
   margin-bottom: 40px;
   width: 500px;
+}
+
+.buttonInside {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#showPassword {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  color: rgb(180, 180, 180);
+  font-size: 20px;
+}
+
+#showPassword:hover {
+  cursor: pointer;
 }
