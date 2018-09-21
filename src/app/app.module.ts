@@ -8,7 +8,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { MatTableModule, MatPaginatorModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MultiSelectModule} from 'primeng/multiselect';
 import {CalendarModule} from 'primeng/calendar';
 import {AccordionModule} from 'primeng/accordion';
 import {ChartModule} from 'primeng/chart';
@@ -21,19 +20,15 @@ import { SearchComponent } from './components/search/search.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LandingComponent } from './components/landing/landing.component';
-import { ExpenseComponent } from './components/expenses/expense/expense.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth.guard';
 import { UserService } from './services/user.service';
 import { ExpenseService } from './services/expense.service';
 import { CategoryService } from './services/category.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
-import { ExpenseListComponent } from './components/expenses/expense-list/expense-list.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { DatePipe } from '@angular/common';
-
-// import { ExpenseEditComponent } from './components/expenses/expense-edit/expense-edit.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
@@ -51,8 +46,6 @@ const appRoutes: Routes = [
     SearchComponent,
     DashboardComponent,
     ProfileComponent,
-    ExpenseComponent,
-    ExpenseListComponent,
     DataTableComponent,
     ChartComponent,
   ],
@@ -69,7 +62,6 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
-    MultiSelectModule,
     CalendarModule,
     AccordionModule,
     ChartModule
@@ -79,7 +71,7 @@ const appRoutes: Routes = [
     useClass: TokenInterceptorService,
     multi: true
   }, UserService, ExpenseService, CategoryService,
-  DatePipe],
+  DatePipe, DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
