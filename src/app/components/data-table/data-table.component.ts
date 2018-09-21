@@ -15,6 +15,7 @@ export class DataTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @Input() expenses: BehaviorSubject<Expense[]>;
   @Output() deleteExpense = new EventEmitter();
+
   dataSource: DataTableDataSource;
   constructor(private expenseService: ExpenseService) { }
 

@@ -7,7 +7,7 @@ import { ExpenseService } from '../../services/expense.service';
 import { CategoryService } from '../../services/category.service';
 import { Category } from '../../models/category.model';
 import { User } from '../../models/user.model';
-import { Expense } from '../data-table/data-table-datasource';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-navbar',
@@ -19,10 +19,10 @@ export class NavbarComponent implements OnInit {
   user = {} as User;
   categories: Category[];
   newExpense = {};
-  @Output() addNewExpense: EventEmitter<Expense>  = new EventEmitter<Expense>();
 
   constructor(private modalService: NgbModal, private router: Router, private authService: AuthService,
-    private userService: UserService, private categoryService: CategoryService, private expenseService: ExpenseService) { }
+    private userService: UserService, private categoryService: CategoryService, private expenseService: ExpenseService,
+    private dashBoardComponent: DashboardComponent) { }
 
   ngOnInit() {
     this.userService.getUserInfo().subscribe(data => {
@@ -43,11 +43,11 @@ export class NavbarComponent implements OnInit {
 
   createExpense() {
     this.expenseService.newExpense(this.newExpense)
-      .subscribe(res => this.onCreateSuccess(res), err => console.log(err));
+      .subscribe(res => this.onCreateSuccess(), err => console.log(err));
   }
 
-  onCreateSuccess(newExpense) {
-    this.addNewExpense.emit(newExpense);
+  onCreateSuccess() {
+    this.dashBoardComponent.loadData();
   }
 
   viewDashboard() {
