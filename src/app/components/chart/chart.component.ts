@@ -10,8 +10,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 export class ChartComponent implements OnInit {
   expenseSums: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   expenses: Expense[];
-
   data: any;
+
   constructor(private dashBoardComponent: DashboardComponent) {
   }
 
@@ -41,5 +41,4 @@ export class ChartComponent implements OnInit {
       this.expenseSums[new Date(expense.spentAt).getMonth()] += expense.amount;
     });
   }
-
 }

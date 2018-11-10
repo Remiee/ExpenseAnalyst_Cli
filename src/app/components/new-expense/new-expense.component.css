@@ -1,0 +1,23 @@
+.bluebtn {
+  border: none;
+  width: 200px;
+  border-radius: 1.5rem;
+  background-color: #54bbc9;
+  color: white;
+}
+
+.bluebtn:hover {
+  background-color: #4eaebb;
+}
+
+#saveExp {
+  border: none;
+  width: 200px;
+  border-radius: 1.5rem;
+  background-color: #54bbc9;
+  color: white;
+}
+
+.form-group {
+  width: 300px;
+}

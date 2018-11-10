@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegistrationComponent implements OnInit {
   registerUserData = {};
+
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {

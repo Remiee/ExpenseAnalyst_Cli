@@ -2,7 +2,6 @@
   <div class="sidebar-header">
     <img src="../../assets/img/logo2.png">
   </div>
-
   <ul class="components">
     <li>
       <a href="#submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{user.firstName}}
@@ -16,7 +15,7 @@
         </li>
       </ul>
     </li>
-    <button type="button" class="btn btn-block mx-auto mt-4 bluebtn" (click)="open(content)">New expense</button>
+    <app-new-expense></app-new-expense>
     <li class="mt-4">
       <a (click)="viewDashboard()">Your expenses</a>
     </li>
@@ -28,43 +27,3 @@
     </li>
   </ul>
 </nav>
-
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Add new expense</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <form role="form" method="POST" #myForm="ngForm">
-      <div class="form-group mx-auto">
-        <label for="amount">Amount</label>
-        <div class="input-group">
-          <input [(ngModel)]="newExpense.amount" id="amount" class="form-control" name="amount" required>
-        </div>
-      </div>
-      <div class="form-group mx-auto">
-        <label for="category">Category</label>
-        <select class="form-control" [(ngModel)]="newExpense.category" name="category" id="category" required>
-          <option value="">All</option>
-          <option [value]="category.name" *ngFor="let category of categories">{{category.name}}</option>
-        </select>
-      </div>
-      <div class="form-group mx-auto">
-        <label for="comment">Comment</label>
-        <div class="input-group">
-          <input [(ngModel)]="newExpense.comment" id="comment" class="form-control" name="comment">
-        </div>
-      </div>
-      <div class="form-group mx-auto">
-        <label for="spentAt">Date</label><br>
-        <p-calendar [(ngModel)]="newExpense.spentAt" dateFormat="yy-mm-dd" id="spentAt" inputStyleClass="form-control"
-          name="spentAt" placeholder=" yyyy-mm-dd" required></p-calendar>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-outline-dark mx-auto bluebtn" (click)="createExpense(); modal.close('Save click')">Save</button>
-  </div>
-</ng-template>

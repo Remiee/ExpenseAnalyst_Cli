@@ -11,6 +11,7 @@ import { User } from '../../models/user.model';
 })
 export class ProfileComponent implements OnInit {
   user: User = {} as User;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
