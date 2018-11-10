@@ -1,4 +1,4 @@
-import { Injectable, Injector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpInterceptor } from '@angular/common/http';
 import { AuthService } from './auth.service';
 
@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class TokenInterceptorService implements HttpInterceptor {
-  constructor(private injector: Injector, private authService: AuthService) { }
+  constructor(private authService: AuthService) { }
 
   intercept(req, next) {
     const tokenizedReq = req.clone({

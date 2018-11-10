@@ -8,9 +8,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { MatTableModule, MatPaginatorModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CalendarModule} from 'primeng/calendar';
-import {AccordionModule} from 'primeng/accordion';
-import {ChartModule} from 'primeng/chart';
+import { CalendarModule } from 'primeng/calendar';
+import { AccordionModule } from 'primeng/accordion';
+import { ChartModule } from 'primeng/chart';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,6 +29,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { DatePipe } from '@angular/common';
+import { NewExpenseComponent } from './components/new-expense/new-expense.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
     ProfileComponent,
     DataTableComponent,
     ChartComponent,
+    NewExpenseComponent,
   ],
   imports: [
     BsDropdownModule.forRoot(),
@@ -71,7 +73,7 @@ const appRoutes: Routes = [
     useClass: TokenInterceptorService,
     multi: true
   }, UserService, ExpenseService, CategoryService,
-  DatePipe, DashboardComponent],
+    DatePipe, DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

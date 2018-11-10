@@ -7,7 +7,6 @@ import { User } from '../models/User.model';
   providedIn: 'root'
 })
 export class UserService {
-  user: User;
   private updateUrl = 'http://localhost:8080/users/profile';
   private userInfoUrl = 'http://localhost:8080/users/userInfo';
 

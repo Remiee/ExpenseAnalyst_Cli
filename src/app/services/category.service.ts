@@ -7,8 +7,6 @@ import { Category } from '../models/Category.model';
   providedIn: 'root'
 })
 export class CategoryService {
-  categories: Category[];
-
   private categoryListUrl = 'http://localhost:8080/categories';
   constructor(private httpClient: HttpClient) { }
 

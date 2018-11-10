@@ -30,11 +30,11 @@ export class ExpenseService {
   }
 
   newExpense(expense) {
-    return this.http.post<any>(this.createExpenseUrl, expense);
+    return this.http.post<Expense>(this.createExpenseUrl, expense);
   }
 
   delete(id) {
-    return this.http.delete<any>(`${this.deleteExpenseUrl}/${id}`);
+    return this.http.delete(`${this.deleteExpenseUrl}/${id}`);
   }
 }
 
